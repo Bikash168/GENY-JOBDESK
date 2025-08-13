@@ -276,7 +276,7 @@ export default function Page() {
             },
             {
               name: "Pro Recruiter",
-              price: "$49/mo",
+              price: "₹49/mo",
               points: [
                 "Post up to 20 jobs",
                 "AI shortlists",
@@ -298,7 +298,7 @@ export default function Page() {
           ].map((p) => (
             <div
               key={p.name}
-              className={`rounded-2xl border bg-white/5 p-6 ${p.highlight ? "border-emerald-400/40 shadow-emerald-500/20 shadow-xl" : "border-white/10"
+              className={`rounded-2xl border bg-white/5 p-6 ₹{p.highlight ? "border-emerald-400/40 shadow-emerald-500/20 shadow-xl" : "border-white/10"
                 }`}
             >
               <div className="flex items-baseline justify-between">
