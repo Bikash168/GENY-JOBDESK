@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -55,8 +55,14 @@ export default function Page() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-xl bg-emerald-400 grid place-items-center text-slate-900 font-black">G</div>
-              <span className="font-extrabold tracking-tight text-lg">GENY JOBDESK</span>
+              <Image
+                src="/logo.png" // Place your logo file in the public folder
+                alt="GENY JOBDESK Logo"
+                width={100} // Adjust size as needed
+                height={100}
+                className="rounded-xl"
+                priority
+              />
             </div>
             <nav className="hidden md:flex items-center gap-6 text-sm">
               {navItems.map((n) => (
@@ -130,7 +136,7 @@ export default function Page() {
               Connect job aspirants with recruiters — instantly
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-white/70">
-              GENY JOBDESK is a modern recruitment platform that bridges candidates and employers with verified profiles, AI-matched roles, and seamless messaging — inspired by platforms like Naukri, redesigned for speed.
+              GENY JOBDESK is a modern recruitment platform that bridges candidates and employers with verified profiles, AI-matched roles, and seamless messaging — A smarter, faster way to connect talent with opportunity.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <a
@@ -292,9 +298,8 @@ export default function Page() {
           ].map((p) => (
             <div
               key={p.name}
-              className={`rounded-2xl border bg-white/5 p-6 ${
-                p.highlight ? "border-emerald-400/40 shadow-emerald-500/20 shadow-xl" : "border-white/10"
-              }`}
+              className={`rounded-2xl border bg-white/5 p-6 ${p.highlight ? "border-emerald-400/40 shadow-emerald-500/20 shadow-xl" : "border-white/10"
+                }`}
             >
               <div className="flex items-baseline justify-between">
                 <h3 className="text-xl font-semibold">{p.name}</h3>
@@ -307,11 +312,10 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
-              <button className={`mt-6 w-full rounded-xl px-4 py-2 font-medium ${
-                p.highlight
-                  ? "bg-emerald-500 text-slate-900 hover:bg-emerald-400"
-                  : "border border-white/15 hover:bg-white/10"
-              }`}
+              <button className={`mt-6 w-full rounded-xl px-4 py-2 font-medium ${p.highlight
+                ? "bg-emerald-500 text-slate-900 hover:bg-emerald-400"
+                : "border border-white/15 hover:bg-white/10"
+                }`}
               >
                 {p.cta}
               </button>
@@ -327,7 +331,7 @@ export default function Page() {
           {[
             {
               q: "Is GENY JOBDESK live?",
-              a: "We're rolling out access in stages. Join the waitlist and we'll notify you as soon as it's ready in your region.",
+              a: "We&apos;re rolling out access in stages. Join the waitlist and we&apos;ll notify you as soon as it&apos;s ready in your region.",
             },
             {
               q: "How is it different from other job portals?",
@@ -355,7 +359,7 @@ export default function Page() {
             <div>
               <h3 className="text-2xl font-bold">Get early access</h3>
               <p className="mt-2 text-white/80">
-                Share your email and whether you're a candidate or recruiter. We'll reach out with a private beta invite.
+                Share your email and whether you&apos;re a candidate or recruiter. We&apos;ll reach out with a private beta invite.
               </p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <input
@@ -364,8 +368,8 @@ export default function Page() {
                   className="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3 backdrop-blur placeholder:text-white/50 focus:outline-none"
                 />
                 <select className="rounded-xl border border-white/15 bg-white/10 px-4 py-3 focus:outline-none">
-                  <option>I'm a Candidate</option>
-                  <option>I'm a Recruiter</option>
+                  <option>I&apos;m a Candidate</option>
+                  <option>I&apos;m a Recruiter</option>
                 </select>
                 <button className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-3 font-medium text-slate-900 hover:bg-emerald-400">
                   <Mail className="h-4 w-4" /> Join Waitlist
@@ -396,8 +400,14 @@ export default function Page() {
         <div className="mx-auto max-w-7xl px-4 py-10 grid gap-6 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-xl bg-emerald-400 grid place-items-center text-slate-900 font-black">G</div>
-              <span className="font-extrabold tracking-tight">GENY JOBDESK</span>
+              <Image
+                src="/logo.png" // Place your logo file in the public folder
+                alt="GENY JOBDESK Logo"
+                width={100} // Adjust size as needed
+                height={100}
+                className="rounded-xl"
+                priority
+              />
             </div>
             <p className="mt-3 text-sm text-white/70 max-w-sm">
               An app platform connecting job aspirants with prospective recruiters — fast, secure, and mobile-first.
@@ -433,7 +443,6 @@ export default function Page() {
           </div>
           <div className="text-sm text-white/60">
             <div>© {new Date().getFullYear()} GENY JOBDESK. All rights reserved.</div>
-            <div className="mt-2">Made with Next.js & Tailwind CSS.</div>
           </div>
         </div>
       </footer>
